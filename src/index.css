@@ -1,0 +1,7 @@
+* {
+    text-align: right;
+}
+
+.rtl {
+    direction: rtl;
+}

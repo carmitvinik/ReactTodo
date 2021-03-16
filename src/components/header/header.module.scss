@@ -1,0 +1,30 @@
+$BGC : green;
+$txtColor : white;
+$minHeight : 2em;
+$direction : rtl;
+$defTextAlign: right;
+
+
+.main {
+    padding: 1rem;
+    direction: $direction;
+    min-height: $minHeight;  
+    outline: 0;
+    margin: 0 auto;
+    text-align: $defTextAlign;
+    h1 {
+        background-color: $BGC;
+        color: $txtColor;
+        padding: 1rem;
+        margin: 0rem;
+        direction: $direction;
+    }
+
+    div {
+        font-weight: bold;
+        padding: 1rem;
+        margin: 0rem;
+        background-color: gray;
+        direction: $direction;
+    }
+}
