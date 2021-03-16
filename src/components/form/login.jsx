@@ -6,7 +6,6 @@ import {login} from './schema';
 import { toast } from "react-toastify";
 import Input from './input';
 import ttext from '../configTranslate';
-//test
 const LogIn = () => {
     const [password, setPass] = useState('');
     const [email,setEmail] = useState('');

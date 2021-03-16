@@ -41,11 +41,25 @@ const SignUpForm  = () => {
              }
         }}>
             <Input type="text" id="username" title="שם משתמש" errors={errors.username} 
-            onChange={ (e) => { setErrors({    username: '', password: '', email:''   });    setUsername(e.target.value);  }} />
+            onChange={ (e) => { setErrors({    username: '', password: '', email:''   });    setUsername(e.target.value);  }} 
+            onKeyPress={(e)=>{if (e.key==="Enter") {
+                document.getElementById("email").focus();
+                document.getElementById("email").select();
+            }}}
+            />
             <Input type="text" id="email" title="אימייל" errors={errors.email} 
-            onChange={ (e) => { setErrors({    username: '', password: '', email:''   });    setEmail(e.target.value);     }} />
+            onChange={ (e) => { setErrors({    username: '', password: '', email:''   });    setEmail(e.target.value);     }} 
+            onKeyPress={(e)=>{if (e.key==="Enter") {
+                document.getElementById("pw").focus();
+                document.getElementById("pw").select();
+            }}}
+            />
             <Input type="password" id="pw" title="סיסמה" errors={errors.password} 
-            onChange={ (e) => { setErrors({    username: '', password: '', email:''   });    setPass(e.target.value);       }} />   
+            onChange={ (e) => { setErrors({    username: '', password: '', email:''   });    setPass(e.target.value);       }} 
+             onKeyPress={(e)=>{if (e.key==="Enter") {
+                document.getElementById("submit").focus();
+            }}}
+            />   
             <Input type="submit" id="submit" title="הרשם"  />                                                         
         </form>
     )
