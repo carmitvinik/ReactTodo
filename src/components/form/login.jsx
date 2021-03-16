@@ -13,7 +13,7 @@ const LogIn = () => {
     const [errors,setErrors] = useState({    username: '', password: '', email:''    });
     const joiOptions = { abortEarly:false };
     return (
-        <form onSubmit={ async (e)=>{ //rem
+        <form onSubmit={ async (e)=>{ 
              e.preventDefault();
              let joiObj = Joi.validate({password:password, email:email},login,joiOptions);
              if (!joiObj.error) { //do submit
