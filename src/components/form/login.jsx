@@ -33,7 +33,7 @@ const LogIn = () => {
                 return false;
              }
         }}>
-            <Input type="text" id="email" title="אימייל" errors={errors.email} icon="email"
+            <Input type="text" id="email" title={JoiHeb.email} errors={errors.email} icon="email"
             onChange={ (e) => { setErrors({    username: '', password: '', email:''   });    setEmail(e.target.value);     }} 
             onKeyPress= { (e)=> { 
                 if (e.key==="Enter") {
@@ -45,7 +45,7 @@ const LogIn = () => {
                 } 
             }
             />            
-            <Input type="password" id="pw" title="סיסמה" errors={errors.password} 
+            <Input type="password" id="pw" title={JoiHeb.password} errors={errors.password} 
             onChange={ (e) => { setErrors({    username: '', password: '', email:''   });    setPass(e.target.value);       }} 
             onKeyPress={ (e)=> { if (e.key==="Enter") {
                     document.getElementById("submit").focus();

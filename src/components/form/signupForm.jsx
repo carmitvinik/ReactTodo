@@ -25,7 +25,7 @@ const SignUpForm  = () => {
              if (!joiObj.error) { //do submit
                 try {
                     userService.createUser(username,email,password);
-                    toast("החשבון נפתח בהצלחה");
+                    toast(JoiHeb.accountOpenSuccess);
                     history.replace("/signin"); //redirect
                 } 
                 catch (ex) {
@@ -40,27 +40,27 @@ const SignUpForm  = () => {
                 return false;
              }
         }}>
-            <Input type="text" id="username" title="שם משתמש" errors={errors.username} 
+            <Input type="text" id="username" title={JoiHeb.username} errors={errors.username} 
             onChange={ (e) => { setErrors({    username: '', password: '', email:''   });    setUsername(e.target.value);  }} 
             onKeyPress={(e)=>{if (e.key==="Enter") {
                 document.getElementById("email").focus();
                 document.getElementById("email").select();
             }}}
             />
-            <Input type="text" id="email" title="אימייל" errors={errors.email} 
+            <Input type="text" id="email" title={JoiHeb.email} errors={errors.email} 
             onChange={ (e) => { setErrors({    username: '', password: '', email:''   });    setEmail(e.target.value);     }} 
             onKeyPress={(e)=>{if (e.key==="Enter") {
                 document.getElementById("pw").focus();
                 document.getElementById("pw").select();
             }}}
             />
-            <Input type="password" id="pw" title="סיסמה" errors={errors.password} 
+            <Input type="password" id="pw" title={JoiHeb.password} errors={errors.password} 
             onChange={ (e) => { setErrors({    username: '', password: '', email:''   });    setPass(e.target.value);       }} 
              onKeyPress={(e)=>{if (e.key==="Enter") {
                 document.getElementById("submit").focus();
             }}}
             />   
-            <Input type="submit" id="submit" title="הרשם"  />                                                         
+            <Input type="submit" id="submit" title={JoiHeb.register}  />                                                         
         </form>
     )
 }
